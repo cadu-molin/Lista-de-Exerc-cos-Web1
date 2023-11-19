@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Zebra</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Linha 1 coluna 1</td>
+            <td>Linha 1 coluna 2</td>
+        </tr>
+        <tr>
+            <td>Linha 2 coluna 1</td>
+            <td>Linha 2 coluna 2</td>
+        </tr>
+        <tr>
+            <td>Linha 3 coluna 1</td>
+            <td>Linha 3 coluna 2</td>
+        </tr>
+        <tr>
+            <td>Linha 4 coluna 1</td>
+            <td>Linha 4 coluna 2</td>
+        </tr>
+        <tr>
+            <td>Linha 5 coluna 1</td>
+            <td>Linha 5 coluna 2</td>
+        </tr>
+        <tr>
+            <td>Linha 6 coluna 1</td>
+            <td>Linha 6 coluna 2</td>
+        </tr>
+        <tr>
+            <td>Linha 7 coluna 1</td>
+            <td>Linha 7 coluna 2</td>
+        </tr>
+        <tr>
+            <td>Linha 8 coluna 1</td>
+            <td>Linha 8 coluna 2</td>
+        </tr>
+        <tr>
+            <td>Linha 9 coluna 1</td>
+            <td>Linha 9 coluna 2</td>
+        </tr>
+    </table>
+
+    <script>
+        const tabela = document.querySelector("table")
+
+        tabela.style.border = "1px solid black"
+        tabela.style.width = "100%"
+
+        const linhas = document.getElementsByTagName("tr")
+
+        for(let i = 0; i < linhas.length; i++) {
+            if (i % 2 === 0) {
+                linhas[i].style.backgroundColor = "gray"
+            } else {
+                linhas[i].style.backgroundColor = "white"
+            }
+        }
+    </script>
+</body>
+</html>

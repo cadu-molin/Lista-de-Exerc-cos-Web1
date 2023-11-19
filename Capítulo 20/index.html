@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+</head>
+<body>
+    <table border = 1 id="tab">
+        <tr>
+            <td>Linha 1 coluna 1</td>
+            <td>Linha 1 coluna 2</td>
+            <td>Linha 1 coluna 3</td>
+        </tr>
+        <tr>
+            <td>Linha 2 coluna 1</td>
+            <td>Linha 2 coluna 2</td>
+            <td>Linha 2 coluna 3</td>
+        </tr>
+        <tr>
+            <td>Linha 3 coluna 1</td>
+            <td>Linha 3 coluna 2</td>
+            <td>Linha 3 coluna 3</td>
+        </tr>
+    </table>
+
+    <script>
+        const linha = document.getElementsByTagName("tr")
+
+        for(i = 0; i < linha.length; i++) {
+            linha[i].lastElementChild.remove()
+        }
+
+        const tabela = document.getElementById("tab")
+        const novaLinha = document.createElement("tr")
+        const coluna1 = document.createElement("td")
+        const coluna2 = document.createElement("td")
+
+        coluna1.innerText = "Linha 4 coluna 1"
+        coluna2.innerText = "Linha 4 coluna 2"
+
+        novaLinha.appendChild(coluna1)
+        novaLinha.appendChild(coluna2)
+
+        tabela.appendChild(novaLinha)
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edição de campos</title>
+</head>
+<body>
+    <div id="p1">
+        <button class="btnImpar"> B1 </button>
+        <button class="btnPar"> B2 </button>
+        <button class="btnImpar"> B3 </button>
+        <button class="btnPar"> B4 </button>
+        <button class="btnImpar"> B5 </button>
+        <button class="btnPar"> B6 </button>
+        <button class="btnImpar"> B7 </button>
+        <button class="btnPar"> B8 </button>
+    </div>
+    <div id="p2">
+        <form>
+            <label id="lbl"> Nome: </label>
+            <input type="text" name="nomePessoa" value="Digite o seu nome" />
+            <input type="submit" value="Enviar" />
+        </form>
+    </div>
+
+    <Script>
+        const botaoPar = document.getElementsByClassName("btnPar")
+        
+        for(let i = 0; i < botaoPar.length; i++) {
+            botaoPar[i].style.color = "red"
+        }
+
+        const InputEntradaPessoa = document.getElementsByName("nomePessoa")
+        
+        for(let i = 0; i < InputEntradaPessoa.length; i++) {
+            InputEntradaPessoa[i].style.backgroundColor = "yellow"
+        }
+
+        const botao = document.getElementsByTagName("button")
+
+        for(i = 0; i < botao.length; i++) {
+            botao[i].style.backgroundColor = "black"
+        }
+
+        const label = document.getElementById("lbl")
+
+        label.style.color = "pink"
+
+        const primeiroBotao = document.querySelector("button")
+
+        primeiroBotao.style.color = "white"
+    </Script>
+</body>
+</html>

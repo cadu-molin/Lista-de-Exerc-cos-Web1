@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar para tabela</title>
+    <style>
+        div {
+            padding: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid;
+            padding: 4px;
+            width: 130px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome">
+        </div>
+        <div>
+            <label for="idade">Idade:</label>
+            <input type="text" name="idade" id="idade">
+            <button onclick="enviarDados()">enviar</button>
+        </div>
+        <div>
+            <table>
+            </table>
+        </div>
+    </div>
+    <script>
+        function enviarDados() {
+            const tabela = document.getElementsByTagName("table")[0]
+            const novaLinha = document.createElement("tr")
+            const coluna1 = document.createElement("td")
+            const coluna2 = document.createElement("td")
+
+            coluna1.innerText = document.getElementById("nome").value
+            coluna2.innerText = document.getElementById("idade").value
+
+            novaLinha.appendChild(coluna1)
+            novaLinha.appendChild(coluna2)
+
+            tabela.appendChild(novaLinha)
+
+            document.getElementById("nome").value = ""
+            document.getElementById("idade").value = ""
+        }
+    </script>
+</body>
+</html>

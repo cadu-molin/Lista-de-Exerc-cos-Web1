@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibição de imagens</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        #imgPrincipal {
+            width: 100%;
+            height: 100%;
+            align-self: center;
+            object-fit: cover;
+        }
+
+        .imagenSecundaria {
+            width: 400px;
+            object-fit: cover;
+        }
+
+        .containerImagenSecundaria {
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div style="flex-direction: column">
+        <div style="width: 96%; height: 70vh; overflow: hidden; margin: 15px 40px;">
+            <img id="imgPrincipal" src="https://th.bing.com/th/id/R.c86e43bb93bd877cad3c03f024655985?rik=qnGl8s5S3pjcTg&riu=http%3a%2f%2f4.bp.blogspot.com%2f-vTXD5GAm0CM%2fTnS3gXueqUI%2fAAAAAAAAAPc%2fM9aTsxhkPos%2fs1600%2ffoto_mais_bonita_mundo.jpg&ehk=WYjI%2buyK1jThUyTB5ov4EFTVys98qT5xFFaR0QxqiYo%3d&risl=&pid=ImgRaw&r=0" alt="imagem principal">
+        </div>
+        <div style="height: 20vh; margin: 15px 40px;">
+            <div class="containerImagenSecundaria">
+                <img class="imagenSecundaria" onmouseover="alterarImagemPrincipal(this.src)" src="https://th.bing.com/th/id/R.c86e43bb93bd877cad3c03f024655985?rik=qnGl8s5S3pjcTg&riu=http%3a%2f%2f4.bp.blogspot.com%2f-vTXD5GAm0CM%2fTnS3gXueqUI%2fAAAAAAAAAPc%2fM9aTsxhkPos%2fs1600%2ffoto_mais_bonita_mundo.jpg&ehk=WYjI%2buyK1jThUyTB5ov4EFTVys98qT5xFFaR0QxqiYo%3d&risl=&pid=ImgRaw&r=0" alt="Imagem secundário 1">
+            </div>
+            <div class="containerImagenSecundaria">
+                <img class="imagenSecundaria" onmouseover="alterarImagemPrincipal(this.src)" src="https://th.bing.com/th/id/OIP.Wm8ow4v1pCv-6HxBsy7F_AHaEo?rs=1&pid=ImgDetMain" alt="Imagem secundário 2">
+            </div>
+            <div class="containerImagenSecundaria">
+                <img class="imagenSecundaria" onmouseover="alterarImagemPrincipal(this.src)" src="https://pt.best-wallpaper.net/wallpaper/1920x1080/1710/Mountains-trees-lake-nature-landscape_1920x1080.jpg" alt="Imagem secundário 3">
+            </div>
+            <div class="containerImagenSecundaria">
+                <img class="imagenSecundaria" onmouseover="alterarImagemPrincipal(this.src)" src="https://4.bp.blogspot.com/-Nl_B6zr2Nb8/TlVLzlkYGQI/AAAAAAAADYI/S4FoG3YHuLg/s1600/praia-e-montanhas-ao-fundo-imagens-imagem-de-fundo-wallpaper-para-pc-computador-tela-gratis-ambiente-de-trabalho.jpg" alt="Imagem secundário 4">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function alterarImagemPrincipal(novaImagen) {
+            document.getElementById("imgPrincipal").src = novaImagen
+        }
+    </script>
+</body>
+</html>
